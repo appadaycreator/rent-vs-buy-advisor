@@ -1,8 +1,9 @@
 {
   "name": "Rent Vs Buy Advisor",
   "short_name": "rent-vs-buy-",
-  "start_url": "/",
+  "start_url": "/rent-vs-buy-advisor/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/rent-vs-buy-advisor/"
 }
