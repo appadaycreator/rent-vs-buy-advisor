@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#6366f1" />
+<meta name="theme-color" content="#7c3aed" />
     <title>賃貸vs購入どちらがお得診断【無料】無料診断・アドバイス</title>
     <meta name="description" content="家賃・物件価格・居住年数・ライフスタイルから賃貸と購入のトータルコストを比較診断。登録不要・完全無料でご利用いただけます。">
     <link rel="canonical" href="https://appadaycreator.com/rent-vs-buy-advisor/">
@@ -25,7 +25,8 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <meta name="twitter:image" content="https://appadaycreator.com/assets/ogp-default.png" />
 <meta name="twitter:description" content="家賃・物件価格・居住年数・ライフスタイルから賃貸と購入のトータルコストを比較診断。登録不要・完全無料でご利用いただけます。" />
     <meta name="twitter:card" content="summary">
-    
+    <meta name="twitter:title" content="賃貸vs購入どちらがお得診断【無料】無料診断・アドバイス" />
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -42,34 +43,77 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #E0E7FF 0%, #F0F4FF 100%); min-height: 100vh; color: #333; line-height: 1.6; }
-        .site-header { background: #6366F1; color: white; padding: 32px 20px; text-align: center; }
+        .site-header { background: #7c3aed; color: white; padding: 32px 20px; text-align: center; }
         .site-header .emoji { font-size: 52px; margin-bottom: 8px; }
         .site-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
         .site-header p { font-size: 14px; opacity: 0.9; }
         .container { max-width: 800px; margin: 0 auto; padding: 16px; }
         .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 16px; }
-        .btn { background: #6366F1; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; min-height: 48px; touch-action: manipulation; }
+        .btn { background: #7c3aed; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; min-height: 48px; touch-action: manipulation; }
         .btn:hover { opacity: 0.9; }
         .btn:active { transform: scale(0.98); }
-        .btn:focus-visible { outline: 3px solid #6366F1; outline-offset: 3px; }
-        input, select, textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 15px; margin-top: 4px; font-family: inherit; min-height: 44px; }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: #6366F1; box-shadow: 0 0 0 3px #6366F122; }
+        .btn:focus-visible { outline: 3px solid #7c3aed; outline-offset: 3px; }
+        input[type=number], input[type=text], select, textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 15px; margin-top: 4px; font-family: inherit; min-height: 44px; }
+        input[type=number]:focus, select:focus, textarea:focus { outline: none; border-color: #7c3aed; box-shadow: 0 0 0 3px #7c3aed22; }
         label { font-size: 13px; font-weight: 600; color: #555; display: block; margin-top: 14px; margin-bottom: 2px; }
         .result { display: none; }
         .result.show { display: block; }
-        .result-value { font-size: 36px; font-weight: 700; color: #6366F1; text-align: center; padding: 16px 0; }
-        .badge { display: inline-block; background: #6366F120; color: #6366F1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .result-value { font-size: 36px; font-weight: 700; color: #7c3aed; text-align: center; padding: 16px 0; }
+        .badge { display: inline-block; background: #7c3aed20; color: #7c3aed; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+        /* スライダー付き入力 */
+        .slider-row { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+        .slider-row input[type=range] { flex: 1; height: 6px; accent-color: #7c3aed; cursor: pointer; min-height: unset; padding: 0; border: none; margin: 0; }
+        .slider-row input[type=number] { width: 90px; flex-shrink: 0; margin: 0; min-height: 40px; padding: 8px 10px; }
+        .slider-row .unit { font-size: 13px; color: #888; flex-shrink: 0; }
+
+        /* 入力セクション区切り */
+        .input-section-title { font-size: 12px; font-weight: 700; color: #7c3aed; text-transform: uppercase; letter-spacing: .06em; margin: 18px 0 4px; padding-bottom: 4px; border-bottom: 1.5px solid #e0e7ff; }
+
+        /* 結果バナー */
+        .verdict-banner { border-radius: 12px; padding: 18px 20px; text-align: center; margin-bottom: 14px; }
+        .verdict-banner.buy { background: linear-gradient(135deg, #d1fae5, #ecfdf5); border: 1.5px solid #6ee7b7; }
+        .verdict-banner.rent { background: linear-gradient(135deg, #ede9fe, #f5f3ff); border: 1.5px solid #c4b5fd; }
+        .verdict-banner .verdict-label { font-size: 13px; font-weight: 600; color: #6b7280; margin-bottom: 4px; }
+        .verdict-banner .verdict-main { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+        .verdict-banner.buy .verdict-main { color: #059669; }
+        .verdict-banner.rent .verdict-main { color: #7c3aed; }
+        .verdict-banner .verdict-sub { font-size: 13px; color: #6b7280; }
+
+        /* コスト内訳カード（2列） */
+        .cost-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+        @media (max-width: 480px) { .cost-grid { grid-template-columns: 1fr; } }
+        .cost-card { border-radius: 10px; padding: 14px; }
+        .cost-card.rent-card { background: #f5f3ff; border: 1.5px solid #c4b5fd; }
+        .cost-card.buy-card { background: #ecfdf5; border: 1.5px solid #6ee7b7; }
+        .cost-card .cc-title { font-size: 12px; font-weight: 700; color: #6b7280; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .04em; }
+        .cost-card .cc-total { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+        .cost-card.rent-card .cc-total { color: #7c3aed; }
+        .cost-card.buy-card .cc-total { color: #059669; }
+        .cost-card .cc-row { display: flex; justify-content: space-between; font-size: 12px; color: #6b7280; padding: 2px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .cost-card .cc-row:last-child { border-bottom: none; }
+        .cost-card .cc-row span:last-child { font-weight: 600; color: #374151; }
+
+        /* 損益分岐点ボックス */
+        .breakeven-box { background: #fffbeb; border: 1.5px solid #fcd34d; border-radius: 10px; padding: 12px 16px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+        .breakeven-box .be-icon { font-size: 22px; flex-shrink: 0; }
+        .breakeven-box .be-text { font-size: 13px; color: #78350f; line-height: 1.5; }
+        .breakeven-box .be-text strong { font-size: 16px; color: #d97706; }
+
+        /* グラフ */
+        .chart-wrap { margin-bottom: 6px; }
+        .chart-wrap canvas { width: 100% !important; display: block; border-radius: 8px; }
+
         @media (max-width: 480px) {
             .site-header { padding: 24px 16px; }
             .site-header h1 { font-size: 20px; }
             .card { padding: 16px; }
             .btn { font-size: 15px; padding: 13px 20px; }
             .result-value { font-size: 28px; }
+            .verdict-banner .verdict-main { font-size: 18px; }
         }
-        /* ── サービス固有CSS ── */
 
-    
 @media print{
   header,footer,nav,button,.no-print,
   [class*="share"],[class*="affiliate"],[id*="share"],
@@ -84,12 +128,12 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <a href="#main-content" class="sr-only" style="position:absolute;top:8px;left:8px;background:#6366F1;color:white;padding:8px 16px;border-radius:6px;z-index:9999;text-decoration:none;font-size:14px;" tabindex="1">メインコンテンツへスキップ</a>
+    <a href="#main-content" class="sr-only" style="position:absolute;top:8px;left:8px;background:#7c3aed;color:white;padding:8px 16px;border-radius:6px;z-index:9999;text-decoration:none;font-size:14px;" tabindex="1">メインコンテンツへスキップ</a>
 
     <header class="site-header" role="banner">
         <div class="emoji" aria-hidden="true">🏡</div>
         <h1>賃貸vs購入どちらがお得診断</h1>
-        <p>家賃・物件価格・居住年数・ライフスタイルから賃貸と購入のトータルコストを比較...</p>
+        <p>家賃・物件価格・居住年数・ライフスタイルから賃貸と購入のトータルコストを比較診断</p>
     </header>
 
     <main id="main-content" class="container" role="main" aria-label="賃貸vs購入どちらがお得診断のメインコンテンツ">
@@ -97,21 +141,82 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
         <div class="card">
-          <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;">🏡 賃貸vs購入どちらがお得診断</h2>
-          <label>月家賃（円）</label>
-          <input type="number" id="rent" placeholder="80000" min="0" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px;box-sizing:border-box;margin-bottom:8px;">
-          <label style="margin-top:8px;">物件購入価格（万円）</label>
-          <input type="number" id="price" placeholder="3000" min="0" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px;box-sizing:border-box;margin-bottom:8px;">
-          <label style="margin-top:8px;">居住予定年数（年）</label>
-          <input type="number" id="years" placeholder="20" min="1" max="50" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px;box-sizing:border-box;margin-bottom:8px;">
-          <label style="margin-top:8px;">住宅ローン金利（%）</label>
-          <input type="number" id="rate" placeholder="1.5" min="0" max="10" step="0.1" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px;box-sizing:border-box;">
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:4px;">🏡 賃貸vs購入どちらがお得診断</h2>
+          <p style="font-size:12px;color:#888;margin-bottom:12px;">6項目を入力すると詳細な比較と損益分岐点を表示します</p>
+
+          <div class="input-section-title">賃貸の条件</div>
+          <label for="rent">月家賃（円）</label>
+          <input type="number" id="rent" placeholder="80000" min="0" inputmode="numeric">
+
+          <div class="input-section-title">購入の条件</div>
+          <label for="price">物件購入価格（万円）</label>
+          <input type="number" id="price" placeholder="3000" min="0" inputmode="numeric">
+
+          <label for="down">頭金（万円）</label>
+          <input type="number" id="down" placeholder="300" min="0" inputmode="numeric">
+
+          <label for="mgmt">管理費+修繕積立金（月額・円）<span style="font-weight:400;color:#aaa;margin-left:4px;">マンションの場合</span></label>
+          <input type="number" id="mgmt" placeholder="20000" min="0" inputmode="numeric">
+
+          <div class="input-section-title">共通の条件</div>
+          <label for="years">居住予定年数（年）</label>
+          <div class="slider-row">
+            <input type="range" id="years_range" min="1" max="40" step="1" value="20">
+            <input type="number" id="years" placeholder="20" min="1" max="50" value="20" inputmode="numeric">
+            <span class="unit">年</span>
+          </div>
+
+          <label for="rate">住宅ローン金利（%）</label>
+          <div class="slider-row">
+            <input type="range" id="rate_range" min="0" max="5" step="0.1" value="1.5">
+            <input type="number" id="rate" placeholder="1.5" min="0" max="10" step="0.1" value="1.5" inputmode="decimal">
+            <span class="unit">%</span>
+          </div>
+
           <button class="btn" style="margin-top:20px;" onclick="calculate()">賃貸vs購入を比較する</button>
-          <div class="result" id="result" style="margin-top:16px;">
-            <div class="card">
-              <div id="output" style="font-size:1.1rem;font-weight:700;color:#6366F1;padding:8px 0;"></div>
-              <p id="detail" style="color:#444;font-size:14px;margin-top:8px;line-height:1.8;white-space:pre-line;"></p>
+
+          <!-- 結果エリア -->
+          <div class="result" id="result" style="margin-top:20px;" aria-live="polite">
+            <!-- 判定バナー -->
+            <div id="verdict-banner" class="verdict-banner rent">
+              <div class="verdict-label">判定結果</div>
+              <div id="verdict-main" class="verdict-main"></div>
+              <div id="verdict-sub" class="verdict-sub"></div>
             </div>
+
+            <!-- 損益分岐点 -->
+            <div id="breakeven-box" class="breakeven-box">
+              <div class="be-icon">📌</div>
+              <div id="breakeven-text" class="be-text"></div>
+            </div>
+
+            <!-- コスト内訳（2列） -->
+            <div class="cost-grid">
+              <div class="cost-card rent-card">
+                <div class="cc-title">🏠 賃貸トータル</div>
+                <div id="rent-total" class="cc-total"></div>
+                <div class="cc-row"><span>家賃合計</span><span id="rent-sum"></span></div>
+                <div class="cc-row"><span>引越費用等</span><span>30万円</span></div>
+              </div>
+              <div class="cost-card buy-card">
+                <div class="cc-title">🏡 購入トータル</div>
+                <div id="buy-total" class="cc-total"></div>
+                <div class="cc-row"><span>頭金+諸費用</span><span id="buy-init"></span></div>
+                <div class="cc-row"><span>ローン総返済</span><span id="buy-loan"></span></div>
+                <div class="cc-row"><span>固定資産税</span><span id="buy-tax"></span></div>
+                <div class="cc-row"><span>修繕費</span><span id="buy-repair"></span></div>
+                <div class="cc-row"><span>管理費合計</span><span id="buy-mgmt"></span></div>
+                <div class="cc-row"><span>資産残存価値</span><span id="buy-asset"></span></div>
+                <div class="cc-row" style="margin-top:4px;padding-top:4px;border-top:1.5px solid #6ee7b7;"><span>月ローン返済額</span><span id="buy-monthly"></span></div>
+              </div>
+            </div>
+
+            <!-- グラフ -->
+            <div class="chart-wrap">
+              <canvas id="chart" height="120"></canvas>
+            </div>
+
+            <p style="font-size:11px;color:#aaa;text-align:center;margin-top:4px;">※資産残存価値は購入価格×70%で試算。実際の価値は物件・立地・築年数により異なります</p>
           </div>
         </div>
 
@@ -119,9 +224,9 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <div class="card" style="margin-top:8px;">
             <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
             <div style="display:flex;flex-direction:column;gap:6px;">
-                <a href="https://appadaycreator.com/housing-loan-simulator/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">🏠 住宅ローン返済シミュレーター →</a>
-                <a href="https://appadaycreator.com/mortgage-refinance-advisor/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">住宅ローン借り換え診断 →</a>
-                <a href="https://appadaycreator.com/new-vs-used-home-advisor/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">新築 vs 中古住宅 比較診断 →</a>
+                <a href="https://appadaycreator.com/housing-loan-simulator/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">🏠 住宅ローン返済シミュレーター →</a>
+                <a href="https://appadaycreator.com/mortgage-refinance-advisor/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">住宅ローン借り換え診断 →</a>
+                <a href="https://appadaycreator.com/new-vs-used-home-advisor/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">新築 vs 中古住宅 比較診断 →</a>
             </div>
         </div>
 
@@ -132,11 +237,11 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <div class="card" style="margin-top:8px;background:#f8fafc;">
             <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 使い方</h2>
             <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.9;">
-                <li>入力フォームの各項目を確認する</li>
-                <li>必要な数値・条件をすべて入力する</li>
-                <li>計算ボタンをクリックして結果を取得する</li>
-                <li>計算結果と詳細な内訳を確認する</li>
-                <li>条件を変えて複数パターンを比較する</li>
+                <li>月家賃・物件価格・頭金・管理費を入力する</li>
+                <li>居住予定年数・ローン金利をスライダーで調整する</li>
+                <li>「賃貸vs購入を比較する」ボタンをクリックする</li>
+                <li>コスト内訳・グラフ・損益分岐点を確認する</li>
+                <li>条件を変えて複数パターンを比較する（前回値が自動復元されます）</li>
             </ol>
         </div>
 
@@ -153,12 +258,12 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
               <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 参考値としてご活用ください。重要な判断の際は専門家・公式機関にご確認ください。</p>
             </div>
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
-              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 何回でも計算できますか？</p>
-              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、回数制限なく何度でもご利用いただけます。条件を変えて比較にお使いください。</p>
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 損益分岐点とは何ですか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 購入コストが賃貸コストを下回る（購入の方がお得になる）ようになる居住年数です。一般的に長く住むほど購入が有利になります。</p>
             </div>
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
               <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 入力したデータはどこかに保存されますか？</p>
-              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: いいえ。すべての計算はブラウザ内で処理され、データのサーバー送信は行いません。</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 前回の入力値をブラウザのlocalStorageに保存し、次回訪問時に自動復元します。サーバーへの送信は一切行いません。</p>
             </div>
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
               <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: スマートフォンで利用できますか？</p>
@@ -192,56 +297,223 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     </footer>
 
     <script>
-    // ★ここだけ実装★
-    const CFG = {
-      inputs: ['rent','price','years','rate'],
-      error: '月家賃・購入価格・居住年数・金利を入力してください',
-    };
-    function calcLogic(vals) {
-      const [rent, price, years, rate] = vals;
+    const STORAGE_KEY = 'rvb_inputs_v2';
+
+    // --- スライダーと数値入力の同期 ---
+    function syncSlider(rangeId, numberId) {
+      const rng = document.getElementById(rangeId);
+      const num = document.getElementById(numberId);
+      rng.addEventListener('input', () => { num.value = rng.value; autoCalc(); });
+      num.addEventListener('input', () => {
+        const v = parseFloat(num.value);
+        if (!isNaN(v)) rng.value = Math.min(Math.max(v, rng.min), rng.max);
+        autoCalc();
+      });
+    }
+
+    // --- リアルタイム自動計算（結果表示済みの場合のみ） ---
+    function autoCalc() {
+      if (document.getElementById('result').classList.contains('show')) {
+        calculate(false);
+      }
+    }
+
+    // --- 計算ロジック ---
+    function calcLogic(rent, price, down, mgmt, years, rate) {
       const priceYen = price * 10000;
-      // 賃貸総コスト
-      const rentTotal = rent * 12 * years + 300000;
-      // ローン月額（元利均等）
+      const downYen  = down  * 10000;
+      // 賃貸トータル
+      const rentSum   = rent * 12 * years;
+      const rentTotal = rentSum + 300000;
+      // 購入: ローン元本 = 物件価格 - 頭金
+      const loanPrincipal = Math.max(priceYen - downYen, 0);
       const r = rate / 100 / 12;
       const n = years * 12;
       let loanMonthly;
-      if (r === 0) { loanMonthly = priceYen / n; }
-      else { loanMonthly = priceYen * r * Math.pow(1+r,n) / (Math.pow(1+r,n)-1); }
-      const loanTotal = loanMonthly * n;
-      // 購入総コスト
+      if (r === 0 || n === 0) { loanMonthly = n > 0 ? loanPrincipal / n : 0; }
+      else { loanMonthly = loanPrincipal * r * Math.pow(1+r,n) / (Math.pow(1+r,n) - 1); }
+      const loanTotal   = loanMonthly * n;
+      const misc        = priceYen * 0.06;         // 購入諸費用（仲介料・登記・税等）
       const propertyTax = priceYen * 0.014 * years;
-      const repair = 100000 * years;
-      const assetValue = priceYen * 0.6;
-      const buyTotal = loanTotal + propertyTax + repair - assetValue;
-      const diff = Math.abs(rentTotal - buyTotal);
-      const cheaper = rentTotal < buyTotal ? '賃貸' : '購入';
-      const fmt = v => Math.round(v).toLocaleString();
-      const result = `${cheaper}の方が約${fmt(diff)}円お得`;
-      const detail = [
-        `【賃貸トータルコスト】${fmt(rentTotal)}円`,
-        `  家賃: ${fmt(rent*12*years)}円 + 引越費用: 300,000円`,
-        `【購入トータルコスト】${fmt(Math.round(buyTotal))}円`,
-        `  ローン総返済: ${fmt(Math.round(loanTotal))}円（月${fmt(Math.round(loanMonthly))}円）`,
-        `  固定資産税: ${fmt(Math.round(propertyTax))}円 / 修繕費: ${fmt(repair)}円`,
-        `  資産残存価値: -${fmt(Math.round(assetValue))}円`,
-        `【判定】${cheaper}の方が${fmt(diff)}円有利`,
-      ].join('
-    ');
-      return { result, detail };
+      const repairCost  = 80000 * years;           // 自己修繕費（管理費外）
+      const mgmtTotal   = mgmt * 12 * years;
+      const assetValue  = priceYen * 0.70;         // 残存価値: 70%
+      const buyInit     = downYen + misc;
+      const buyTotal    = buyInit + loanTotal + propertyTax + repairCost + mgmtTotal - assetValue;
+
+      // 損益分岐点（1〜50年でループ）
+      let breakEvenYear = null;
+      for (let y = 1; y <= 50; y++) {
+        const rt = rent * 12 * y + 300000;
+        const nn = y * 12;
+        let lm;
+        if (r === 0 || nn === 0) { lm = nn > 0 ? loanPrincipal / nn : 0; }
+        else { lm = loanPrincipal * r * Math.pow(1+r,nn) / (Math.pow(1+r,nn) - 1); }
+        const lt = lm * nn;
+        const bt = buyInit + lt + priceYen * 0.014 * y + 80000 * y + mgmt * 12 * y - assetValue;
+        if (bt <= rt) { breakEvenYear = y; break; }
+      }
+
+      return {
+        rentTotal, rentSum,
+        buyTotal, buyInit, loanTotal, loanMonthly,
+        propertyTax, repairCost, mgmtTotal, assetValue,
+        breakEvenYear,
+      };
     }
-    // ★以下変更不要★
-    document.addEventListener('DOMContentLoaded',()=>{
-      CFG.inputs.forEach(id=>{ const el=document.getElementById(id); if(el) el.addEventListener('keydown',e=>{ if(e.key==='Enter') calculate(); }); });
-    });
-    function calculate(){
-      const vals=CFG.inputs.map(id=>parseFloat(document.getElementById(id)?.value)||0);
-      if(!vals[0]){ alert(CFG.error); return; }
-      const {result,detail}=calcLogic(vals);
-      document.getElementById('output').textContent=typeof result==='number'?result.toLocaleString():result;
-      const d=document.getElementById('detail'); if(d) d.textContent=detail||'';
+
+    // --- UI更新 ---
+    function fmt(v) { return Math.round(v).toLocaleString() + '円'; }
+    function fmtM(v) { return (Math.round(v / 10000) / 100).toFixed(0) + '万円'; }
+
+    function renderResult(d, rent, price, down, mgmt, years, rate) {
+      const cheaper   = d.rentTotal < d.buyTotal ? 'rent' : 'buy';
+      const diff      = Math.abs(d.rentTotal - d.buyTotal);
+      const diffMonth = Math.round(diff / years / 12);
+
+      // 判定バナー
+      const banner = document.getElementById('verdict-banner');
+      banner.className = 'verdict-banner ' + cheaper;
+      document.getElementById('verdict-main').textContent =
+        (cheaper === 'rent' ? '賃貸' : '購入') + 'の方が約' + fmtM(diff) + 'お得';
+      document.getElementById('verdict-sub').textContent =
+        `月換算で約${diffMonth.toLocaleString()}円の差（${years}年間）`;
+
+      // 損益分岐点
+      const beBox  = document.getElementById('breakeven-box');
+      const beText = document.getElementById('breakeven-text');
+      if (d.breakEvenYear) {
+        beText.innerHTML = `<strong>${d.breakEvenYear}年以上</strong>住み続けると購入の方がお得になります`;
+      } else {
+        beText.innerHTML = '今回の条件では<strong>賃貸が常にお得</strong>です（50年以内に購入が逆転しません）';
+      }
+
+      // コスト内訳
+      document.getElementById('rent-total').textContent = fmtM(d.rentTotal);
+      document.getElementById('rent-sum').textContent   = fmtM(d.rentSum);
+      document.getElementById('buy-total').textContent  = fmtM(d.buyTotal);
+      document.getElementById('buy-init').textContent   = fmtM(d.buyInit);
+      document.getElementById('buy-loan').textContent   = fmtM(d.loanTotal);
+      document.getElementById('buy-tax').textContent    = fmtM(d.propertyTax);
+      document.getElementById('buy-repair').textContent = fmtM(d.repairCost);
+      document.getElementById('buy-mgmt').textContent   = d.mgmtTotal > 0 ? fmtM(d.mgmtTotal) : '—';
+      document.getElementById('buy-asset').textContent  = '-' + fmtM(d.assetValue);
+      document.getElementById('buy-monthly').textContent = fmt(Math.round(d.loanMonthly)) + '/月';
+
+      // Canvas棒グラフ
+      drawChart(d.rentTotal, d.buyTotal);
+    }
+
+    // --- Canvas棒グラフ ---
+    function drawChart(rentTotal, buyTotal) {
+      const canvas = document.getElementById('chart');
+      const ctx    = canvas.getContext('2d');
+      const dpr    = window.devicePixelRatio || 1;
+      const W      = canvas.parentElement.clientWidth;
+      const H      = 120;
+      canvas.width  = W * dpr;
+      canvas.height = H * dpr;
+      canvas.style.width  = W + 'px';
+      canvas.style.height = H + 'px';
+      ctx.scale(dpr, dpr);
+
+      ctx.clearRect(0, 0, W, H);
+      const maxVal = Math.max(rentTotal, buyTotal);
+      const pad    = 16;
+      const barH   = 32;
+      const gap    = 18;
+      const labelW = 48;
+      const barArea = W - pad * 2 - labelW;
+
+      const drawBar = (y, val, color, label) => {
+        const ratio = val / maxVal;
+        const bw    = barArea * ratio;
+        // ラベル
+        ctx.fillStyle = '#888';
+        ctx.font      = '12px Inter, sans-serif';
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(label, pad + labelW - 6, y + barH / 2);
+        // バー
+        ctx.fillStyle = color;
+        const rx = pad + labelW;
+        const rr = 6;
+        ctx.beginPath();
+        ctx.moveTo(rx + rr, y);
+        ctx.lineTo(rx + bw - rr, y);
+        ctx.quadraticCurveTo(rx + bw, y, rx + bw, y + rr);
+        ctx.lineTo(rx + bw, y + barH - rr);
+        ctx.quadraticCurveTo(rx + bw, y + barH, rx + bw - rr, y + barH);
+        ctx.lineTo(rx + rr, y + barH);
+        ctx.quadraticCurveTo(rx, y + barH, rx, y + barH - rr);
+        ctx.lineTo(rx, y + rr);
+        ctx.quadraticCurveTo(rx, y, rx + rr, y);
+        ctx.closePath();
+        ctx.fill();
+        // 金額テキスト
+        ctx.fillStyle = bw > 60 ? 'white' : '#555';
+        ctx.font      = 'bold 12px Inter, sans-serif';
+        ctx.textAlign = bw > 60 ? 'right' : 'left';
+        const tx = bw > 60 ? rx + bw - 8 : rx + bw + 6;
+        ctx.fillText((Math.round(val / 10000)).toLocaleString() + '万円', tx, y + barH / 2);
+      };
+
+      drawBar(pad,              rentTotal, '#7c3aed', '賃貸');
+      drawBar(pad + barH + gap, buyTotal,  '#059669', '購入');
+    }
+
+    // --- メイン計算関数 ---
+    function calculate(showResult = true) {
+      const rent  = parseFloat(document.getElementById('rent').value)  || 0;
+      const price = parseFloat(document.getElementById('price').value) || 0;
+      const down  = parseFloat(document.getElementById('down').value)  || 0;
+      const mgmt  = parseFloat(document.getElementById('mgmt').value)  || 0;
+      const years = parseFloat(document.getElementById('years').value) || 0;
+      const rate  = parseFloat(document.getElementById('rate').value)  || 0;
+
+      if (!rent || !price || !years) {
+        if (showResult) alert('月家賃・物件購入価格・居住予定年数を入力してください');
+        return;
+      }
+
+      const d = calcLogic(rent, price, down, mgmt, years, rate);
+      renderResult(d, rent, price, down, mgmt, years, rate);
       document.getElementById('result').classList.add('show');
+
+      // localStorage保存
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ rent, price, down, mgmt, years, rate }));
+      } catch(e) {}
     }
+
+    // --- 初期化 ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // スライダー同期
+      syncSlider('years_range', 'years');
+      syncSlider('rate_range',  'rate');
+
+      // localStorage復元
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+        if (saved) {
+          ['rent','price','down','mgmt','years','rate'].forEach(k => {
+            const el = document.getElementById(k);
+            if (el && saved[k] != null) el.value = saved[k];
+          });
+          // スライダーも同期
+          const yr = document.getElementById('years_range');
+          const rr = document.getElementById('rate_range');
+          if (yr) yr.value = saved.years || 20;
+          if (rr) rr.value = saved.rate  || 1.5;
+        }
+      } catch(e) {}
+
+      // Enterキーで計算
+      ['rent','price','down','mgmt','years','rate'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+      });
+    });
     </script>
 </body>
 </html>
